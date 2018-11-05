@@ -5,7 +5,6 @@ import { HttpClient } from '@angular/common/http';
 @Injectable()
 export class TextService {
   constructor(private _http: HttpClient) { }
-  // private textArray = this.mockText.split(' ');
   private mockText = 'A year ago I was in the audience at a gathering of designers in San Francisco. ' +
       'There were four designers on stage, and two of them worked for me. I was there to support them. ' +
       'The topic of design responsibility came up, possibly brought up by one of my designers, I honestly don’t remember the details. ' +

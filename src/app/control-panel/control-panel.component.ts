@@ -19,7 +19,7 @@ export class ControlPanelComponent implements OnInit {
   }
 
   newSelectedWord(word){
-    if(word){
+    if (word) {
       this.selectedWord = word;
       this.textService.getSynonyms(word.string).subscribe(data => {console.log(data); this.synonyms = data});
     } else {
@@ -30,22 +30,26 @@ export class ControlPanelComponent implements OnInit {
 
   selectSyn(event) {
     const syn = event.target.value;
-    if(this.selectedWord)
+    if (this.selectedWord) {
       this.selectedWord.string = syn;
+    }
   }
 
   boldText() {
-    if(this.selectedWord)
+    if (this.selectedWord) {
       this.selectedWord.bold = !this.selectedWord.bold;
+    }
   }
 
   underlineText() {
-    if(this.selectedWord)
+    if (this.selectedWord) {
       this.selectedWord.underline = !this.selectedWord.underline;
+    }
   }
 
   italicText() {
-    if(this.selectedWord)
+    if (this.selectedWord) {
       this.selectedWord.italic = !this.selectedWord.italic;
+    }
   }
 }

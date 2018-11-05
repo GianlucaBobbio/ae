@@ -18,13 +18,13 @@ export class FileComponent implements OnInit {
     this.textService.textArray.subscribe(text => this.textArray = text);
     document.onclick = () => {
       const selection = window.getSelection();
-      if(selection){
+      if (selection) {
         const selectionWord = selection.toString();
-        if(!selectionWord){
+        if (!selectionWord) {
           this.textService.setSelectedWord(null);
         }
       }
-    }
+    };
   }
 
   handleClick(word) {

@@ -1,5 +1,9 @@
 <div class="format-actions">
-  <button class="format-action" type="button"><b>B</b></button>
-  <button class="format-action" type="button"><i>I</i></button>
-  <button class="format-action" type="button"><u>U</u></button>
+  <button class="format-action" (click)="boldText()" type="button" [ngClass]="{'selected':selectedWord?.bold}"><b>B</b></button>
+  <button class="format-action" (click)="italicText()" type="button" [ngClass]="{'selected':selectedWord?.italic}"><i>I</i></button>
+  <button class="format-action" (click)="underlineText()" type="button" [ngClass]="{'selected':selectedWord?.underline}"><u>U</u></button>
+  <select class="format-action select-syn" (change)="selectSyn($event)">
+      <option disabled [value]="">Synonyms</option>
+      <option *ngFor="let syn of synonyms" [value]="syn.word">{{syn.word}}</option>
+  </select>
 </div>

@@ -15,3 +15,11 @@
 button + button {
   margin-left: 5px;
 }
+
+.selected{
+  background-color: #ffa500;
+}
+
+.select-syn{
+  margin-left: 5px;
+}

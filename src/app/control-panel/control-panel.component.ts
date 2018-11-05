@@ -10,6 +10,16 @@ export class ControlPanelComponent implements OnInit {
 
   selectedWord = {};
   synonyms = [];
+  colors = [{
+    name: 'Black',
+    value: 'black'
+  }, {
+    name: 'Red',
+    value: 'red'
+  }, {
+    name: 'Blue',
+    value: 'blue'
+  }];
   selectedSyn = '0';
   selectedColor = '0';
 

@@ -8,8 +8,6 @@
   </select>
   <select [hidden]="!selectedWord?.string" class="format-action select-syn" (change)="selectColor($event)" [(ngModel)]="selectedColor">
       <option disabled [value]="0">Color</option>
-      <option value="black">Black</option>
-      <option value="red">Red</option>
-      <option value="blue">Blue</option>
+      <option *ngFor="let color of colors" [value]="color.value">{{color.name}}</option>
   </select>
 </div>

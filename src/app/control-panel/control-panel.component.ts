@@ -10,6 +10,8 @@ export class ControlPanelComponent implements OnInit {
 
   selectedWord = {};
   synonyms = [];
+  selectedSyn = '0';
+  selectedColor = '0';
 
   constructor(private textService: TextService) {
   }
@@ -22,6 +24,8 @@ export class ControlPanelComponent implements OnInit {
     if (word) {
       this.selectedWord = word;
       this.textService.getSynonyms(word.string).subscribe(data => {console.log(data); this.synonyms = data});
+      this.selectedColor = word.color;
+      this.selectedSyn = '0';
     } else {
       this.selectedWord = {};
       this.synonyms = [];
@@ -32,6 +36,13 @@ export class ControlPanelComponent implements OnInit {
     const syn = event.target.value;
     if (this.selectedWord) {
       this.selectedWord.string = syn;
+    }
+  }
+
+  selectColor(event) {
+    const color = event.target.value;
+    if (this.selectedWord) {
+      this.selectedWord.color = color;
     }
   }
 

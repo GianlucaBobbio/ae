@@ -8,8 +8,9 @@
 }
 
 .format-actions {
-  width: 200px;
-  margin-right: 400px;
+  width: 500px;
+  margin-right: 100px;
+  text-align: left;
 }
 
 button + button {

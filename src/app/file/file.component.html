@@ -1,3 +1,3 @@
 <div class="file" (click)="handleClick()">
-  <span *ngFor="let word of textArray" (click)="handleClick(word)" [ngClass]="{'bold':word.bold,'italic':word.italic,'underline':word.underline}">{{word.string}} </span>
+  <span *ngFor="let word of textArray" (click)="handleClick(word)" [ngClass]="getClassFromWord(word)">{{word.string}} </span>
 </div>

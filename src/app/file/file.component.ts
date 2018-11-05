@@ -38,4 +38,14 @@ export class FileComponent implements OnInit {
       }
     }
   }
+
+  getClassFromWord(word) {
+    const cssClass = {
+      'bold': word.bold,
+      'italic': word.italic,
+      'underline': word.underline
+    };
+    cssClass[word.color] = true;
+    return cssClass;
+  }
 }

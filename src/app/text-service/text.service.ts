@@ -14,7 +14,7 @@ export class TextService {
   public textArray = new BehaviorSubject(null);
   getMockText() {
     this.textArray.next(this.mockText.split(' ').map((word) => {
-      return {string: word, bold: false, italic: false, underline: false};
+      return {string: word, bold: false, italic: false, underline: false, color: 'black'};
     }));
   }
   setMockText(text) {
